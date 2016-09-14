@@ -1,0 +1,83 @@
+body {
+	margin: auto;
+	font-family: 'Lato', sans-serif;
+}
+
+/**
+ * Generics to sm-section
+ */
+.sm-section {
+	position: relative;
+	text-align: center;
+	height: 100vh;
+	
+	h1 {
+		margin-top: 0;
+	}
+}
+
+.first-scene {
+	background: radial-gradient(circle, #74A6EE 0%, #485CB2 100%);
+
+	h1 {
+		color: #fff;
+	}
+}
+
+/**
+ * First scene animation
+ */
+.first-scene-animation {
+	opacity: 0;
+    transition: all 1s ease-out;
+}
+
+.fade-in {
+	opacity: 1;
+}
+
+.second-scene {
+	background-image: url('../img/bkg-mario.jpg');
+	background-size: cover;
+}
+
+/**
+ * Second scene animation
+ */
+.second-scene-animation {
+	transform: scale(.2);
+	transition: all 1s ease-out;
+    transform-origin: center bottom;
+}
+
+.scale-in {
+	transform: scale(1);
+}
+
+.rga-logo {
+	font-size: 2.75em;
+	&:before {
+		margin-right: .1em;
+		content: '';
+		display: inline-block;
+		width: 1em;
+		height: 1em;
+		background-color: #f8001d;
+		position: relative;
+		top: 0.375rem;
+	}
+}
+
+.content-center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.content-bottom {
+	position: absolute;
+	bottom: 70px;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
