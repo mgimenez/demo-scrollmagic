@@ -4,22 +4,6 @@
     // init controller
     var controller = new ScrollMagic.Controller();
 
-    // create a scene to pin
-    var pinScene = new ScrollMagic.Scene({
-        triggerElement: '.intro',
-        triggerHook: 'onLeave', // pin on top
-        duration: '30%' // 30% of top, this pushes down the following elements, You can use pushFollowers: false for disable
-    })
-    .setPin('.intro', {
-        pushFollowers: false // Disables the spance duration added
-    })
-    .addIndicators({
-        name: 'pin scene',
-        colorTrigger: 'yellow',
-        colorStart: 'orange'
-    })
-    .addTo(controller);
-
     // create a scene
     var firstScene = new ScrollMagic.Scene({
         triggerElement: '.first-scene-trigger', // element from where will start the scene
